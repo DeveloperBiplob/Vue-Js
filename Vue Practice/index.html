@@ -10,12 +10,15 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ title }}</p>
+        <!-- <p>{{ title }}</p>
         <p>{{ isItTrue }}</p>
         <p>{{ cars[0] }}</p>
         <p>{{ robot.name }}</p>
         <p>{{ gretting() }}</p>
-        <p>{{ grettingName() }}</p>
+        <p>{{ grettingName() }}</p> -->
+
+        <img v-bind:src="src" v-bind:alt="alt">
+        <a v-bind:href="link">Click Me</a>
     </div>
 
     <script src="./app.js"></script>
