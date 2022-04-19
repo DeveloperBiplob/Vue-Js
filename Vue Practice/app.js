@@ -6,9 +6,21 @@ new Vue({
         cars: ['Ford', 'Toyota'],
         robot: {
             name: 'Franky'
+        }
+        // gretting: ()=> {
+        //     return "Hello World! Function"
+        // }
+    },
+    methods: {
+        // //Old Way--
+        gretting: function(){
+            return 'Hello Biplob'
         },
-        gretting: ()=> {
-            return "Hello World! Function"
+
+        // Es6 --
+        grettingName(){
+            // return 'Hello world'
+            return this.title
         }
     }
 });
