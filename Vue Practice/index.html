@@ -17,8 +17,11 @@
         <p>{{ gretting() }}</p>
         <p>{{ grettingName() }}</p> -->
 
-        <img v-bind:src="src" v-bind:alt="alt">
-        <a v-bind:href="link">Click Me</a>
+        <!-- <img v-bind:src="src" v-bind:alt="alt">
+        <a v-bind:href="link">Click Me</a> -->
+
+        <p v-text="myText"></p>
+        <p v-html="html"></p>
     </div>
 
     <script src="./app.js"></script>

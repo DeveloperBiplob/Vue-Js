@@ -25,9 +25,15 @@ new Vue({
     // }
 
     // Directives: V-bind-----//
+    // data: {
+    //     src: "https://picsum.photos/id/237/200/300",
+    //     alt: "This is a Dog",
+    //     link: 'http://www.google.com'
+    // }
+
+    // Directives: V-text and V-html---//
     data: {
-        src: "https://picsum.photos/id/237/200/300",
-        alt: "This is a Dog",
-        link: 'http://www.google.com'
+        myText: 'Hello Biplob',
+        html: "<strong>Hello Bipu</strong>",
     }
 });
