@@ -45,7 +45,7 @@
 
 
 
-        <P v-for="car in cars">
+        <!-- <P v-for="car in cars">
             {{ car }}
         </P>
         <P v-for="(car, index) in cars">
@@ -53,7 +53,18 @@
         </P>
         <P v-for="(value, index, key) in user">
             {{ key }} : {{ index }} :  {{ value }}
-        </P>
+        </P> -->
+
+        <p>{{ name }}</p>
+        <!-- 2nd time re-reder na korte chaile v-once use korbo, er pole kono update thakle o seta kaj korbe na.  -->
+        <p v-once>{{ name }}</p> 
+
+        {{ update() }}
+
+
+
+
+
     </div>
 
     <script src="./app.js"></script>

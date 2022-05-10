@@ -45,12 +45,24 @@ new Vue({
     //     minAge: 18
     // }
 
+    // data: {
+    //     cars: ['BMW', 'TOYTA', 'NASA'],
+    //     user: {
+    //         name: 'Biplob',
+    //         age: 20,
+    //         minAge: 18
+    //     }
+    // }
+
+    // v-once-----//
     data: {
-        cars: ['BMW', 'TOYTA', 'NASA'],
-        user: {
-            name: 'Biplob',
-            age: 20,
-            minAge: 18
+        name: 'Biplob',
+    },
+    methods: {
+        update(){
+            setTimeout(()=> {
+                this.name = 'Jabery'
+            }, 2000)
         }
     }
 
