@@ -70,15 +70,26 @@
         <p>Y: {{ y }}</p> -->
 
         <!-- Argument Pass -------------->
-        <h1 v-text="name"></h1>
-        <button v-on:click="updateName('learn with biplob', $event)">click me</button>
+        <!-- <h1 v-text="name"></h1>
+        <button v-on:click="updateName('learn with biplob', $event)">click me</button> -->
         
         <!-- modifire -------------->
-        <h1 v-text="name"></h1>
-        <button v-on:click.right="updateName('learn with biplob', $event)">click me</button>
+        <!-- <h1 v-text="name"></h1>
+        <button v-on:click.right="updateName('learn with biplob', $event)">click me</button> -->
 
-        <form v-on:submit.prevent>
+        <!-- <form v-on:submit.prevent>
             <input type="text">
+            <button>submit</button>
+        </form> -->
+
+        <!-- V-model------ -->
+        <form v-on:submit.prevent="gettingData">
+            <label for="">First Name</label>
+            <input type="text" v-model="formData.firstName">
+            <br><br>
+            <label for="">last Name</label>
+            <input type="text" v-model="formData.lastName"> 
+            <br><br>
             <button>submit</button>
         </form>
 

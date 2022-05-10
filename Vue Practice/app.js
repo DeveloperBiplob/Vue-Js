@@ -85,13 +85,25 @@ new Vue({
 
     // Argument & Modifier-------//
 
+    // data:{
+    //     name: 'Biplob'
+    // },
+    // methods:{
+    //     updateName(name, event){
+    //         this.name = name
+    //         console.log(event)
+    //     }
+    // }
+
     data:{
-        name: 'Biplob'
+        formData: {
+            firstName: '',
+            lastName: '',
+        }
     },
     methods:{
-        updateName(name, event){
-            this.name = name
-            console.log(event)
+        gettingData(){
+            console.log(this.formData)
         }
     }
 
