@@ -55,12 +55,19 @@
             {{ key }} : {{ index }} :  {{ value }}
         </P> -->
 
-        <p>{{ name }}</p>
+        <!-- <p>{{ name }}</p> -->
         <!-- 2nd time re-reder na korte chaile v-once use korbo, er pole kono update thakle o seta kaj korbe na.  -->
-        <p v-once>{{ name }}</p> 
+        <!-- <p v-once>{{ name }}</p>  -->
 
-        {{ update() }}
+        <!-- {{ update() }} -->
 
+        <h1 v-text="name"></h1>
+        <button v-on:click="update">Click me</button>
+        <br><br><br>
+
+        <div class="box" style="width:400px; height:400px; background:red;" v-on:mousemove="getCoord"></div>
+        <p>X: {{ x }}</p>
+        <p>Y: {{ y }}</p>
 
 
 

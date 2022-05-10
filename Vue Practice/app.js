@@ -55,17 +55,33 @@ new Vue({
     // }
 
     // v-once-----//
-    data: {
+    // data: {
+    //     name: 'Biplob',
+    // },
+    // methods: {
+    //     update(){
+    //         setTimeout(()=> {
+    //             this.name = 'Jabery'
+    //         }, 2000)
+    //     }
+    // }
+
+    // Event Use: V-on -------//
+    data:{
         name: 'Biplob',
+        x: 0,
+        y: 0
     },
     methods: {
         update(){
-            setTimeout(()=> {
-                this.name = 'Jabery'
-            }, 2000)
+            this.name = 'Biplob Jabery'
+        },
+
+        getCoord(event){
+            this.x = event.clientX,
+            this.y = event.clientY
         }
     }
-
 
 
 
