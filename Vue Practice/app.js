@@ -135,22 +135,37 @@ new Vue({
 
 // Create more instance-----//
 
-const firstIns = new Vue({
-    el: "#app1",
-    data: {
+// const firstIns = new Vue({
+//     el: "#app1",
+//     data: {
+//         name: 'Biplob'
+//     }
+// })
+
+// const secnondIns = new Vue({
+//     el: "#app2",
+//     data: {
+//         name: 'Bipu'
+//     },
+//     methods: {
+//         update(){
+//             firstIns.name = 'Update name'
+//         }
+//     }
+
+// })
+
+
+// Mount and Template-----//
+const app1 = new Vue({
+    // el: "#app1",
+    data:{
         name: 'Biplob'
-    }
-})
-
-const secnondIns = new Vue({
-    el: "#app2",
-    data: {
-        name: 'Bipu'
     },
-    methods: {
-        update(){
-            firstIns.name = 'Update name'
-        }
-    }
+    
+    template: `<p>This is {{ name }}</p>`,
+});
 
-})
+setTimeout(() => {
+    app1.$mount("#app1")
+}, 2000);
