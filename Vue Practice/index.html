@@ -24,7 +24,7 @@
         <p v-html="html"></p> -->
 
 
-        <p v-if="age > minAge">
+        <!-- <p v-if="age > minAge">
             You are good to go
         </p>
         <p v-else-if="name = 'Biplob'">
@@ -32,6 +32,15 @@
         </p>
         <p v-else="age < minAge">
             You are not good to go
+        </p> -->
+
+
+        <p v-show="name == 'Biplob'">
+            Yes you are right.
+        </p>
+
+        <p v-show="name !== 'Biplob'">
+            Yes you are not right.
         </p>
     </div>
 
