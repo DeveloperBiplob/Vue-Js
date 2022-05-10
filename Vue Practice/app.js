@@ -95,18 +95,36 @@ new Vue({
     //     }
     // }
 
+    // data:{
+    //     formData: {
+    //         firstName: '',
+    //         lastName: '',
+    //     }
+    // },
+    // methods:{
+    //     gettingData(){
+    //         console.log(this.formData)
+    //     }
+    // }
+
+    // Computed Property  -------//
+    // 
     data:{
-        formData: {
-            firstName: '',
-            lastName: '',
-        }
+        a: 0,
+        b: 0,
+        salary: 10
     },
-    methods:{
-        gettingData(){
-            console.log(this.formData)
+    computed:{
+        addToA(){
+            console.log('add a')
+            return this.a + this.salary
+        },
+
+        addToB(){
+            console.log('add b')
+            return this.b + this.salary
         }
     }
-
 
 
 
