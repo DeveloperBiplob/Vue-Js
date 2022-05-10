@@ -109,24 +109,48 @@ new Vue({
 
     // Computed Property  -------//
     // 
-    data:{
-        a: 0,
-        b: 0,
-        salary: 10
-    },
-    computed:{
-        addToA(){
-            console.log('add a')
-            return this.a + this.salary
-        },
+    // data:{
+    //     a: 0,
+    //     b: 0,
+    //     salary: 10
+    // },
+    // computed:{
+    //     addToA(){
+    //         console.log('add a')
+    //         return this.a + this.salary
+    //     },
 
-        addToB(){
-            console.log('add b')
-            return this.b + this.salary
-        }
-    }
+    //     addToB(){
+    //         console.log('add b')
+    //         return this.b + this.salary
+    //     }
+    // }
+
+
 
 
 
 
 });
+
+// Create more instance-----//
+
+const firstIns = new Vue({
+    el: "#app1",
+    data: {
+        name: 'Biplob'
+    }
+})
+
+const secnondIns = new Vue({
+    el: "#app2",
+    data: {
+        name: 'Bipu'
+    },
+    methods: {
+        update(){
+            firstIns.name = 'Update name'
+        }
+    }
+
+})

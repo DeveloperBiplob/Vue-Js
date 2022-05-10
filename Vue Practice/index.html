@@ -94,16 +94,23 @@
         </form> -->
 
         <!-- Computed Property ---------->
-        <button v-on:click="a++">Add A</button> <br><br>
+        <!-- <button v-on:click="a++">Add A</button> <br><br>
         <button v-on:click="b++">Add B</button>
 
         <p>A = {{ a }}</p>
         <p>B = {{ b }}</p>
 
         <p>Salary + A = {{ addToA }}</p>
-        <p>Salary + B = {{ addToB }}</p>
+        <p>Salary + B = {{ addToB }}</p> -->
+    </div>
 
-
+    <!-- create more instance -->
+    <div id="app1">
+        <p>This is the First Instance, Name = {{ name }}</p>
+    </div>
+    <div id="app2">
+        <p>This is the Second Instance  Name = {{ name }}</p>
+        <button @click="update">change</button>
     </div>
 
     <script src="./app.js"></script>
