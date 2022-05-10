@@ -32,8 +32,22 @@ new Vue({
     // }
 
     // Directives: V-text and V-html---//
+    // data: {
+    //     myText: 'Hello Biplob',
+    //     html: "<strong>Hello Bipu</strong>",
+    // }
+
+
+    // Conditional Rendering---//
     data: {
-        myText: 'Hello Biplob',
-        html: "<strong>Hello Bipu</strong>",
+        name: 'Biplob',
+        age: 20,
+        minAge: 18
     }
+
+
+
+
+
+
 });

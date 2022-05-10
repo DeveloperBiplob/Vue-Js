@@ -20,8 +20,19 @@
         <!-- <img v-bind:src="src" v-bind:alt="alt">
         <a v-bind:href="link">Click Me</a> -->
 
-        <p v-text="myText"></p>
-        <p v-html="html"></p>
+        <!-- <p v-text="myText"></p>
+        <p v-html="html"></p> -->
+
+
+        <p v-if="age > minAge">
+            You are good to go
+        </p>
+        <p v-else-if="name = 'Biplob'">
+            You are good
+        </p>
+        <p v-else="age < minAge">
+            You are not good to go
+        </p>
     </div>
 
     <script src="./app.js"></script>
