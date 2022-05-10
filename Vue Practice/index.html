@@ -61,15 +61,26 @@
 
         <!-- {{ update() }} -->
 
-        <h1 v-text="name"></h1>
+        <!-- <h1 v-text="name"></h1>
         <button v-on:click="update">Click me</button>
         <br><br><br>
 
         <div class="box" style="width:400px; height:400px; background:red;" v-on:mousemove="getCoord"></div>
         <p>X: {{ x }}</p>
-        <p>Y: {{ y }}</p>
+        <p>Y: {{ y }}</p> -->
 
+        <!-- Argument Pass -------------->
+        <h1 v-text="name"></h1>
+        <button v-on:click="updateName('learn with biplob', $event)">click me</button>
+        
+        <!-- modifire -------------->
+        <h1 v-text="name"></h1>
+        <button v-on:click.right="updateName('learn with biplob', $event)">click me</button>
 
+        <form v-on:submit.prevent>
+            <input type="text">
+            <button>submit</button>
+        </form>
 
 
     </div>

@@ -67,21 +67,35 @@ new Vue({
     // }
 
     // Event Use: V-on -------//
-    data:{
-        name: 'Biplob',
-        x: 0,
-        y: 0
-    },
-    methods: {
-        update(){
-            this.name = 'Biplob Jabery'
-        },
+    // data:{
+    //     name: 'Biplob',
+    //     x: 0,
+    //     y: 0
+    // },
+    // methods: {
+    //     update(){
+    //         this.name = 'Biplob Jabery'
+    //     },
 
-        getCoord(event){
-            this.x = event.clientX,
-            this.y = event.clientY
+    //     getCoord(event){
+    //         this.x = event.clientX,
+    //         this.y = event.clientY
+    //     }
+    // }
+
+    // Argument & Modifier-------//
+
+    data:{
+        name: 'Biplob'
+    },
+    methods:{
+        updateName(name, event){
+            this.name = name
+            console.log(event)
         }
     }
+
+
 
 
 
