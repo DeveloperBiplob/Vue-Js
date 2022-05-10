@@ -157,15 +157,31 @@ new Vue({
 
 
 // Mount and Template-----//
-const app1 = new Vue({
-    // el: "#app1",
-    data:{
-        name: 'Biplob'
+// const app1 = new Vue({
+//     // el: "#app1",
+//     data:{
+//         name: 'Biplob'
+//     },
+
+//     template: `<p>This is {{ name }}</p>`,
+// });
+
+// setTimeout(() => {
+//     app1.$mount("#app1")
+// }, 2000);
+
+// Component-------//
+
+Vue.component('name-component', {
+    data(){
+        return {
+            name: "Biplob",
+        }
     },
-    
-    template: `<p>This is {{ name }}</p>`,
+    template: `<p>{{ name }}</p>`
 });
 
-setTimeout(() => {
-    app1.$mount("#app1")
-}, 2000);
+new Vue({
+    el: '#app11',
+
+});
