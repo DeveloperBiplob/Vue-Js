@@ -39,13 +39,20 @@ new Vue({
 
 
     // Conditional Rendering---//
+    // data: {
+    //     name: 'Biplob',
+    //     age: 20,
+    //     minAge: 18
+    // }
+
     data: {
-        name: 'Biplob',
-        age: 20,
-        minAge: 18
+        cars: ['BMW', 'TOYTA', 'NASA'],
+        user: {
+            name: 'Biplob',
+            age: 20,
+            minAge: 18
+        }
     }
-
-
 
 
 

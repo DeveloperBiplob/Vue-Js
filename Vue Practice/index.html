@@ -35,13 +35,25 @@
         </p> -->
 
 
-        <p v-show="name == 'Biplob'">
+        <!-- <p v-show="name == 'Biplob'">
             Yes you are right.
         </p>
 
         <p v-show="name !== 'Biplob'">
             Yes you are not right.
-        </p>
+        </p> -->
+
+
+
+        <P v-for="car in cars">
+            {{ car }}
+        </P>
+        <P v-for="(car, index) in cars">
+            {{ index }} : {{ car }}
+        </P>
+        <P v-for="(value, index, key) in user">
+            {{ key }} : {{ index }} :  {{ value }}
+        </P>
     </div>
 
     <script src="./app.js"></script>
