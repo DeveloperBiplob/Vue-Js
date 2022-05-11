@@ -172,16 +172,57 @@ new Vue({
 
 // Component-------//
 
-Vue.component('name-component', {
-    data(){
-        return {
-            name: "Biplob",
-        }
-    },
-    template: `<p>{{ name }}</p>`
-});
+// Vue.component('name-component', {
+//     data(){
+//         return {
+//             name: "Biplob",
+//         }
+//     },
+//     template: `<p>{{ name }}</p>`
+// });
+
+// new Vue({
+//     el: '#app11',
+
+// });
+
+// Vue life sycle---------//
 
 new Vue({
-    el: '#app11',
-
-});
+    el: "#lifeSycle",
+    data: {
+        name: 'Biplob'
+    },
+    methods:{
+        update(){
+            this.name = 'Update Name'
+        },
+        destroyElement(){
+            this.$destroy();
+        }
+    },
+    beforeCreate(){
+        console.log('Runing before create');
+    },
+    created(){
+        console.log('Created');
+    },
+    beforeMount(){
+        console.log('Runing before mount')
+    },
+    mounted(){
+        console.log('Mounted')
+    },
+    beforeUpdate(){
+        console.log('Runing before update')
+    },
+    updated(){
+        console.log('Updated')
+    },
+    beforeDestroy(){
+        console.log('Runing before destroy')
+    },
+    destroyed(){
+        console.log('Destroyed')
+    }
+})
