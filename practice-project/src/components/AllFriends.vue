@@ -1,11 +1,9 @@
 <template>
     <div>
         <h1>All Friends</h1>
-        <ul>
-            <li v-for="(friend,index) in friends" :key='index'>
-                {{ friend.name }}
-            </li>
-        </ul>
+        <div v-for="(friend,index) in friends" :key='index'>
+            <h3 v-if="friend.online">{{ friend.name}}</h3>
+        </div>
     </div>
 </template>
 

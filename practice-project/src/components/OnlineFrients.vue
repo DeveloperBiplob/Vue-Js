@@ -2,7 +2,7 @@
     <div>
         <h1>Online Friends</h1>
         <div v-for="(friend,index) in friends" :key='index'>
-            <h6 v-if="friend.online">{{ friend.name}}</h6>
+            <h3 v-if="friend.online" @click="unFriend(friend.name)">{{ friend.name}}</h3>
         </div>
     </div>
 </template>
@@ -14,6 +14,11 @@ export default {
     data(){
         return {
 
+        }
+    },
+    methods:{
+        unFriend(name){
+            this.$emit('delete', name);
         }
     }
 }
