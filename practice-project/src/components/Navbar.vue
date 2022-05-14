@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: 'App-Navbar',
+    name: 'NavBar',
     data(){
         return {
 
