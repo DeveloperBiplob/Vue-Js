@@ -3,6 +3,8 @@
     <App-Navbar></App-Navbar>
     <AllFriends :friends="friends"></AllFriends>
     <OnlineFriends :friends="friends" @delete="deleteFriend"></OnlineFriends>
+    <AxiosRequest></AxiosRequest>
+
 
   </div>
 </template>
@@ -11,6 +13,7 @@
 import Navbar from './components/Navbar.vue';
 import AllFriends from './components/AllFriends.vue';
 import OnlineFriends from './components/OnlineFrients.vue';
+import AxiosRequest from './components/AxiosRequest.vue';
 export default {
   name: 'app',
     data(){
@@ -29,6 +32,7 @@ export default {
       'App-Navbar': Navbar,
       AllFriends,
       OnlineFriends,
+      AxiosRequest,
     },
     methods:{
       deleteFriend(payload){
