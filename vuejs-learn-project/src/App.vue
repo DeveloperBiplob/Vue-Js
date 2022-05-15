@@ -1,22 +1,26 @@
 <template>
   <div id="app">
-      {{ name }}
-      {{ age }}
+    <Header :myName="name" :age="age" :studens="myStudents"></Header>
+    <Footer></Footer>
+
     </div>
 </template>
 
 <script>
-
+import Header from './components/HeaderFooter/Header.vue';
+import Footer from './components/HeaderFooter/Footer.vue';
 export default {
   name: 'App',
   data(){
     return {
       name: 'Biplob',
-      age: 20
+      age: 20,
+      myStudents: ['biplob', 'bipu', 'bipul', 'karim'],
     }
   },
   components: {
-
+    Header,
+    Footer,
   }
 }
 </script>
