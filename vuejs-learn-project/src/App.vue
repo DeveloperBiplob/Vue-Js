@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <Header :myName="name" :age="age" :studens="myStudents"></Header>
+    <Header 
+      :myName="name" 
+      :age="age" 
+      :studens="myStudents"
+      :firnsName="firstName"
+      :lastName="lastName"
+      :myAge="myAge"
+      @updateValue="firstName = $event"></Header>
     <Footer></Footer>
 
     </div>
@@ -16,6 +23,9 @@ export default {
       name: 'Biplob',
       age: 20,
       myStudents: ['biplob', 'bipu', 'bipul', 'karim'],
+      firstName: 'Biplob',
+      lastName: 'Jabery',
+      myAge: 22,
     }
   },
   components: {
