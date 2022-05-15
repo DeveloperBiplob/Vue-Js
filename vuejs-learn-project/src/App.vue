@@ -11,6 +11,18 @@
 
     <Home-Page :firstName="firstName"></Home-Page>
     <About-Page :firstName="firstName"></About-Page>
+    <hr>
+    <List-Helper>
+      <ul>
+        <li v-for="list in lists" :key="list">
+          {{ list }}
+        </li>
+      </ul>
+
+      <!-- Name Slot -->
+      <p slot="user">Use also knows PHP</p>
+      <p :slot="loader">Successfully Loging This Website</p>
+    </List-Helper>
     <Footer></Footer>
 
     </div>
@@ -21,6 +33,7 @@ import Header from './components/HeaderFooter/Header.vue';
 import Footer from './components/HeaderFooter/Footer.vue';
 import HomePage from './components/EventBus/Home.vue';
 import AboutPage from './components/EventBus/About.vue';
+import ListHelper from './components/SlotsPractice/ListHelper.vue';
 export default {
   name: 'App',
   data(){
@@ -31,6 +44,8 @@ export default {
       firstName: 'Biplob',
       lastName: 'Jabery',
       myAge: 22,
+      lists: ['Html', 'Css', 'Javascript'],
+      loader: '',
     }
   },
   components: {
@@ -38,7 +53,13 @@ export default {
     Footer,
     HomePage,
     AboutPage,
-}
+    ListHelper,
+  },
+  created(){
+    setTimeout(()=> {
+      this.loader = 'other';
+    }, 3000)
+  }
 }
 </script>
 

@@ -18,8 +18,8 @@ export default {
         }
     },
     created(){
-        bus.$on('nameChange', (data) => {
-            this.firstName = data;
+        bus.$on('nameChange', () => {
+            // this.firstName = data;
         })
     }
 }
