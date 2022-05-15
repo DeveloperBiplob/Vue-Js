@@ -8,6 +8,9 @@
       :lastName="lastName"
       :myAge="myAge"
       @updateValue="firstName = $event"></Header>
+
+    <Home-Page :firstName="firstName"></Home-Page>
+    <About-Page :firstName="firstName"></About-Page>
     <Footer></Footer>
 
     </div>
@@ -16,6 +19,8 @@
 <script>
 import Header from './components/HeaderFooter/Header.vue';
 import Footer from './components/HeaderFooter/Footer.vue';
+import HomePage from './components/EventBus/Home.vue';
+import AboutPage from './components/EventBus/About.vue';
 export default {
   name: 'App',
   data(){
@@ -31,7 +36,9 @@ export default {
   components: {
     Header,
     Footer,
-  }
+    HomePage,
+    AboutPage,
+}
 }
 </script>
 
