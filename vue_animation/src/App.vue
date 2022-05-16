@@ -13,6 +13,15 @@
       <div class="p-2 mb-2 bg-success" v-if="customClass">Hello</div>
     </transition>
     <button @click="customClass=!customClass" class="btn btn-success btn-sm">Clck ME</button>
+
+    <hr>
+
+    <!-- Filter  -->
+    <div>
+      <!-- Filter Chaining. joto isse filter use korte parbo, " | " use kore -->
+      {{ text | upperCase | removeText }}
+      <p>{{ text }}</p>
+    </div>
   </div>
 </template>
 
@@ -23,9 +32,18 @@ export default {
     return {
       display: false,
       customClass: false,
+      text: 'Hello World'
 
     }
   },
+  filters: {
+    upperCase(value){
+      return value.toUpperCase();
+    },
+    removeText(value){
+      return value.slice(1);
+    }
+  }
 }
 </script>
 
