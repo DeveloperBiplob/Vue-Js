@@ -23,10 +23,17 @@
       <p>{{ text }}</p>
       <p>{{ description | lowerCase }}</p>
     </div>
+
+    <hr>
+    <!-- Mixins -->
+    <user-page></user-page>
+    <cline-page></cline-page>
   </div>
 </template>
 
 <script>
+import ClinePage from './components/Client.vue';
+import UserPage from './components/User.vue';
 export default {
   neme: 'App',
   data() {
@@ -45,6 +52,10 @@ export default {
     removeText(value){
       return value.slice(1);
     }
+  },
+  components: {
+    ClinePage,
+    UserPage,
   }
 }
 </script>
