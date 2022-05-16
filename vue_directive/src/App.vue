@@ -12,6 +12,9 @@
     <!-- Vue Modifiers -->
     <!-- Isse korle akadik modiefirs use korte parbo like - [v-vueModiefirs.color.size]  only . use kore aktar por akta likhbo --> 
     <p v-vueModiefirs.customStyle></p>
+
+    <!-- Vue Local Directive -->
+    <p v-localDirective:black.yellow="myName"></p>
   </div>
 </template>
 
@@ -23,6 +26,23 @@ export default {
   data(){
     return {
       myName: 'Biplob Jabery',
+    }
+  },
+  directives:{
+    'localDirective' : {
+      bind(el, binding){
+        el.innerHTML = binding.value
+        if(binding.arg === 'black'){
+          el.style.color = 'black'
+          el.style.fontSize = '50px'
+        }
+
+        if(binding.modifiers.yellow){
+          el.style.background = 'yellow'
+          el.style.width = '600px'
+          el.style.margin = 'auto'
+        }
+      }
     }
   }
 }
