@@ -21,6 +21,7 @@
       <!-- Filter Chaining. joto isse filter use korte parbo, " | " use kore -->
       {{ text | upperCase | removeText }}
       <p>{{ text }}</p>
+      <p>{{ description | lowerCase }}</p>
     </div>
   </div>
 </template>
@@ -32,7 +33,8 @@ export default {
     return {
       display: false,
       customClass: false,
-      text: 'Hello World'
+      text: 'Hello World',
+      description: 'THIS IS OUR WEBSITE DESCRIPTION'
 
     }
   },
