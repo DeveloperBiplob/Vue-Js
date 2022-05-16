@@ -151,6 +151,21 @@
       methods: {
         submitted(){
           this.isSubmitted = 'true';
+          this.$http.post('https://jsonplaceholder.typicode.com/posts', {
+              emial : this.userData.email,
+              password : this.userData.password,
+              age: this.userData.age,
+              message: this.message,
+              sendMail: this.sendMail,
+              gender: this.gender,
+              selectedPriority: this.selectedPriority
+          })
+          .then((res)=> {
+              console.log(res);
+          })
+          .catch((err)=> {
+              console.log(err);
+          })
         }
       },
       destroyed(){
