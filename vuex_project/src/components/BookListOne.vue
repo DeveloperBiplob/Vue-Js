@@ -13,10 +13,15 @@
 <script>
 
 export default {
-    props: ['book'],
+    // props: ['book'],
     data(){
         return{
             
+        }
+    },
+    computed: {
+        book(){
+            return this.$store.state.books;
         }
     }
 }
