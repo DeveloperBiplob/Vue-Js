@@ -6,6 +6,7 @@
         <compBookListOne></compBookListOne>
         <compBookListTwo></compBookListTwo>
         <button class="btn btn-primary mr-2" @click="reducePrice"> - Reduce Price</button>
+        <button class="btn btn-primary" @click="increasePrice">Increase Price + </button>
     </div>
 </template>
 
@@ -27,7 +28,9 @@ export default {
         reducePrice(){
             this.$store.commit('reducePrice');
         },
-
+        increasePrice(){
+            this.$store.dispatch('increasePrice');
+        }
     },
     components:{
       compBookListOne,

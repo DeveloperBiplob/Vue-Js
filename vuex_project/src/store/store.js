@@ -37,6 +37,20 @@ export const store = new Vuex.Store({
                 book.price -=1;
             });
         },
+        increasePrice: (increase)=> {
+            increase.books.forEach((book)=> {
+                book.price +=1;
+            });
+        }
+    },
 
+    // Actions
+    // Debug korar jonno use korbo.
+    actions: {
+        increasePrice: (priceIncrease)=>{
+            setTimeout(()=> {
+                priceIncrease.commit('reducePrice');
+            }, 2000);
+        }
     }
 })
