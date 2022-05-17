@@ -2,7 +2,8 @@
     <div id="book-list-one">
         <h2>Book List One</h2>
         <ul>
-            <li v-for="(b,id) in book" :key="id">
+            <!-- <li v-for="(b,id) in book" :key="id"> -->
+            <li v-for="(b,id) in saleBooks" :key="id">
                 <span class="name">{{b.name}}</span>
                 <span class="price">${{b.price}}</span>
             </li>
@@ -22,6 +23,25 @@ export default {
     computed: {
         book(){
             return this.$store.state.books;
+        },
+
+        // Without Use VUEX: Getters-------//
+        // saleBooks(){
+        //     let saleBook = this.$store.state.books.map((book)=> {
+        //         return {
+        //             name: `** ${book.name} **`,
+        //             price: book.price / 2
+        //         }
+        //     });
+
+        //     return saleBook;
+        // }
+
+        //Using Geters----//
+        // getters use korar karon holo amara jodi aki type er data onek gulu component e use kore thaki,
+        // and jodi data ta update korar dorkar pore ta hole jate akta jayate change korle sob gulu component e change hoy jay.
+        saleBooks(){
+            return this.$store.getters.saleBooks;
         }
     }
 }

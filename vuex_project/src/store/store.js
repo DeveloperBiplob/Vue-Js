@@ -11,5 +11,20 @@ export const store = new Vuex.Store({
             {name: "Night Circus", price: 90},
             {name: "Lost World", price: 200}
           ]
+    },
+
+    // Using Getters-----//
+    // central store theke getters er maddome data update.
+    getters: {
+        saleBooks:  (state)=> {
+            let saleBook = state.books.map((book)=> {
+                return {
+                    name: `** ${book.name} **`,
+                    price: book.price / 2
+                }
+            });
+
+            return saleBook;
+        }   
     }
 })
