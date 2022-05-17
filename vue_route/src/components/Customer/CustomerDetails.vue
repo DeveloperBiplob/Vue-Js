@@ -15,11 +15,11 @@
         <!-- Route Name Use Kore ----------------->
         <router-link
         tag="button"
-        :to="{ name: 'customerEdit', params: { params: $route.params.id }}"
+        :to="{ name: 'customerEdit', params: { params: $route.params.id }, query:{userName: 'biplob', userId: 100, address: 'Dhaka'} }"
         class="btn btn-xs btn-success">
         Eidt 
         </router-link>
-        
+
     </div>
 </template>
 
