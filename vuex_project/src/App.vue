@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import compBookListOne from "./components/BookListOne"
 import compBookListTwo from "./components/BookListTwo"
 export default {
@@ -28,9 +29,18 @@ export default {
         reducePrice(){
             this.$store.commit('reducePrice');
         },
-        increasePrice(){
-            this.$store.dispatch('increasePrice');
-        }
+        // increasePrice(){
+        //     this.$store.dispatch('increasePrice');
+        // }
+
+        //MapActions
+        // akti website toh onek gulu Actions thakte pare.
+        // r sei gulu ke sohoje component e use korar jonno MapAction use korbo.
+        // Action gulu koma koma diye likhbo
+
+        ...mapActions([
+            'increasePrice'
+        ])
     },
     components:{
       compBookListOne,
