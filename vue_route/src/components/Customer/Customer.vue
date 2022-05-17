@@ -48,7 +48,31 @@ export default {
             // Route name Use kore
             this.$router.push({name: 'home'});
         }
-    }
+    },
+
+    // Navigation Guard
+    // use kore kore page authenticate krobo.
+
+    beforeRouteEnter(to, from, next){
+        // need onojay condition use korbo
+        // ai age e access korte dibo kuna seta bole dibo.
+
+        next(true)
+        // next(false)
+    },
+    beforeRouteLeave(to, from, next){
+        // ai page theke ber hote dibo kina seta bole dibo.
+        next(true)
+    },
+    beforeRouteUpdate(to, from, next) {
+    // called when the route that renders this component has changed.
+    // This component being reused (by using an explicit `key`) in the new route or not doesn't change anything.
+    // For example, for a route with dynamic params `/foo/:id`, when we
+    // navigate between `/foo/1` and `/foo/2`, the same `Foo` component instance
+    // will be reused (unless you provided a `key` to `<router-view>`), and this hook will be called when that happens.
+    // has access to `this` component instance.
+    next(false)
+  }
 }
 </script>
 
