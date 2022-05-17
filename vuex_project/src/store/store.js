@@ -26,5 +26,17 @@ export const store = new Vuex.Store({
 
             return saleBook;
         }   
+    },
+
+    // Mutation
+    // amara joto doroner method rakhbo shob rakhbo muataion er modde
+    // ta hobel seta ke debug korte subida hobe.
+    mutations: {
+        reducePrice: (state)=> {
+            state.books.forEach((book)=>{
+                book.price -=1;
+            });
+        },
+
     }
 })

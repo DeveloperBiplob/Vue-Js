@@ -5,6 +5,7 @@
 
         <compBookListOne></compBookListOne>
         <compBookListTwo></compBookListTwo>
+        <button class="btn btn-primary mr-2" @click="reducePrice"> - Reduce Price</button>
     </div>
 </template>
 
@@ -21,6 +22,12 @@ export default {
             //   {name: "Lost World", price: 200}
             // ]
         }
+    },
+    methods: {
+        reducePrice(){
+            this.$store.commit('reducePrice');
+        },
+
     },
     components:{
       compBookListOne,
