@@ -5,6 +5,7 @@ import ComCustomer from './components/Customer/Customer.vue'
 import CustomerStart from './components/Customer/CusmoterStart.vue'
 import CustomerDetails from './components/Customer/CustomerDetails.vue'
 import CustomerEdit from './components/Customer/CustomerEdit.vue'
+import ErrorPage from './components/404.vue'
 
 export const routes = [
     {
@@ -39,5 +40,18 @@ export const routes = [
             }
         ]
         
+    },
+
+    // Redirect path
+    // vul kono route e his korle home e redirect korbe. 
+    // {
+    //     path: '*',
+    //     component: ComHome
+    // },
+
+    // amara chile akta 404 page create kore oi khane redirect korte pari.
+    {
+        path: '*',
+        component: ErrorPage
     }
 ]
