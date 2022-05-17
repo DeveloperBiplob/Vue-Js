@@ -12,7 +12,7 @@
 </template>
 
 <script>
-
+import {mapGetters} from 'vuex'
 export default {
     // props: ['book'],
     data(){
@@ -40,9 +40,17 @@ export default {
         //Using Geters----//
         // getters use korar karon holo amara jodi aki type er data onek gulu component e use kore thaki,
         // and jodi data ta update korar dorkar pore ta hole jate akta jayate change korle sob gulu component e change hoy jay.
-        saleBooks(){
-            return this.$store.getters.saleBooks;
-        }
+        // saleBooks(){
+        //     return this.$store.getters.saleBooks;
+        // }
+
+        // MapGetters
+        // akti website toh onek gulu getters thakte pare.
+        // r sei gulu ke sohoje component e use korar jonno MapGetters use korbo.
+        // getters gulu koma koma diye likhbo
+        ...mapGetters([
+            'saleBooks'
+        ])
     }
 }
 </script>
